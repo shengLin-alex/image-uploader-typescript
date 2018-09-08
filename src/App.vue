@@ -8,13 +8,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import AppHeader from './components/AppHeader';
+    import { Component, Vue } from 'vue-property-decorator';
+    import AppHeader from './components/AppHeader';
 
-@Component({
-  components: {
-    AppHeader
-  },
-})
-export default class App extends Vue {}
+    @Component({
+      components: {
+        AppHeader
+      },
+    })
+    export default class App extends Vue {
+    }
 </script>

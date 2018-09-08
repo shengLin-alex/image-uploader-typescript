@@ -1,11 +1,12 @@
 import { AuthState } from "@/store/modules/auth/types";
-import {ActionTree, GetterTree, Module, MutationTree} from "vuex";
+import {ActionTree, Commit, GetterTree, Module, MutationTree} from "vuex";
 import { RootState } from "@/store/types";
 import ImgurApiHelper from "@/api/ImgurApiHelper";
 import { parse } from 'qs';
-import router from '../../../router';
+import router from '../../../routers/router';
 
 export default class AuthModule implements Module<AuthState, RootState> {
+
     state: AuthState = {
         token: window.localStorage.getItem('imgur_token')
     };
@@ -21,18 +22,18 @@ export default class AuthModule implements Module<AuthState, RootState> {
             ImgurApiHelper.login();
         },
 
-        finalizeLogin({ commit }, hash): void {
+        finalizeLogin(context: { commit: Commit, rootState: RootState | any }, hash: string): void {
             const queryObject = parse(hash.replace('#', ''));
 
-            commit('setToken', queryObject.access_token);
+            context.commit('setToken', queryObject.access_token);
             window.localStorage.setItem('imgur_token', queryObject.access_token);
 
             // renew router
             router.push('/');
         },
 
-        logout({ commit }): void {
-            commit('setToken', null);
+        logout(context: { commit: Commit }): void {
+            context.commit('setToken', null);
 
             // must clean token when logout
             window.localStorage.removeItem('imgur_token');

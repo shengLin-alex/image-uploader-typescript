@@ -1,7 +1,8 @@
 import Vue from 'vue';
-import Vuex, { StoreOptions} from "vuex";
+import Vuex, { StoreOptions } from "vuex";
 import { RootState } from "@/store/types";
-import AuthModule from './modules/auth/auth';
+import AuthModule from './modules/auth/AuthModule';
+import ImagesModule from "@/store/modules/images/ImagesModule";
 
 Vue.use(Vuex);
 
@@ -10,7 +11,8 @@ const store: StoreOptions<RootState> = {
         version: '1.0.0'
     },
     modules: {
-        auth: new AuthModule()
+        authModule: new AuthModule(),
+        imagesModule: new ImagesModule()
     }
 };
 
