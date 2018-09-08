@@ -11,6 +11,9 @@
     import { Component, Vue } from 'vue-property-decorator';
     import AppHeader from './components/AppHeader';
 
+    /**
+     * Vue app
+     */
     @Component({
       components: {
         AppHeader

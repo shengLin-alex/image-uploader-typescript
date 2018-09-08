@@ -10,8 +10,15 @@
     import { Action } from 'vuex-class';
     import { Vue, Component } from 'vue-property-decorator';
 
+    /**
+     * 上傳圖片表單區塊
+     */
     @Component
-    export default class ImageList extends Vue {
+    export default class UploadForm extends Vue {
+
+        /**
+         * 上傳圖片
+         */
         @Action('uploadImages') uploadImages;
     }
 </script>

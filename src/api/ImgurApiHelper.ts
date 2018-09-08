@@ -1,5 +1,5 @@
 import { stringify } from 'qs';
-import axios, {AxiosPromise, AxiosResponse} from 'axios';
+import axios, { AxiosPromise, AxiosResponse } from 'axios';
 
 /**
  * Imgur api

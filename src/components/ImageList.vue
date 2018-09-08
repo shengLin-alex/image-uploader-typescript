@@ -11,14 +11,30 @@
     import { Vue, Component } from 'vue-property-decorator';
     import { Getter, Action } from 'vuex-class';
 
+    /**
+     * 圖片清單
+     */
     @Component
     export default class ImageList extends Vue {
+
+        /**
+         * 圖片集合
+         */
         @Getter('allImages') allImages;
 
+        /**
+         * 是否登入
+         */
         @Getter('isLoggedIn') isLoggedIn;
 
+        /**
+         * 載入登入者的圖片
+         */
         @Action('fetchImages') fetchImages;
 
+        /**
+         * 元件建立完成後呼叫
+         */
         created() {
             if (this.isLoggedIn) {
                 this.fetchImages();
