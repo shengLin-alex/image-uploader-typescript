@@ -9,7 +9,7 @@
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import AppHeader from './components/AppHeader';
+    import AppHeader from './components/AppHeader.vue';
 
     /**
      * Vue app

@@ -29,17 +29,17 @@
         /**
          * 是否登入
          */
-        @Getter('isLoggedIn') isLoggedIn: boolean;
+        @Getter('isLoggedIn') isLoggedIn: any;
 
         /**
          * 登入
          */
-        @Action('login') login;
+        @Action('login') login: any;
 
         /**
          * 登出
          */
-        @Action('logout') logout;
+        @Action('logout') logout: any;
     }
 </script>
 

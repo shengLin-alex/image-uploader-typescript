@@ -20,17 +20,17 @@
         /**
          * 圖片集合
          */
-        @Getter('allImages') allImages;
+        @Getter('allImages') allImages: any;
 
         /**
          * 是否登入
          */
-        @Getter('isLoggedIn') isLoggedIn;
+        @Getter('isLoggedIn') isLoggedIn: any;
 
         /**
          * 載入登入者的圖片
          */
-        @Action('fetchImages') fetchImages;
+        @Action('fetchImages') fetchImages: any;
 
         /**
          * 元件建立完成後呼叫

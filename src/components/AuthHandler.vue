@@ -17,7 +17,7 @@
         /**
          * 完成登入後的動作
          */
-        @Action('finalizeLogin') finalizeLogin;
+        @Action('finalizeLogin') finalizeLogin: any;
 
         /**
          * 元件建立完成後呼叫

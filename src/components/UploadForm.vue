@@ -19,7 +19,7 @@
         /**
          * 上傳圖片
          */
-        @Action('uploadImages') uploadImages;
+        @Action('uploadImages') uploadImages: any;
     }
 </script>
 
