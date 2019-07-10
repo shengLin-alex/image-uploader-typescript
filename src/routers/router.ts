@@ -4,10 +4,11 @@ import UploadForm from '../components/UploadForm.vue';
 import ImageList from '../components/ImageList.vue';
 
 export default new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     routes: [
         { path: '/oauth2/callback', component: AuthHandler },
         { path: '/upload', component: UploadForm },
         { path: '/', component: ImageList }
-    ]
+    ],
+    base: 'shenglin-alex.github.io'
 });
